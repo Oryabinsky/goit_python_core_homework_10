@@ -24,7 +24,7 @@ class Phone(Field):
         super().__init__(phone)
 
     def is_valid(self, phone):
-        if not phone or not phone.isdigit() or len(phone) != 10:
+        if not phone.isdigit() or len(phone) != 10:
             return False
         return True
 
