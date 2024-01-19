@@ -17,9 +17,6 @@ class Name(Field):
 class Phone(Field):
     def __init__(self, value):
         super().__init__(value)
-        self.validate()
-
-    def validate(self):
         if not self.value.isdigit() or len(self.value) != 10:
             raise ValueError("Invalid phone number format")
 
